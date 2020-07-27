@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:smartdex/pages/dexhome/homewidgets/dexcard.dart';
 import 'package:smartdex/Models/pokemon.dart';
 import 'package:smartdex/services.dart';
-import 'package:admob_flutter/admob_flutter.dart';
+//import 'package:admob_flutter/admob_flutter.dart';
 
 class DexHome extends StatefulWidget {
 
@@ -32,7 +32,7 @@ class _DexHomeState extends State<DexHome> {
     
     //Admob.initialize("ca-app-pub-5939941348959951~8193666084");
     //Test Ad
-    Admob.initialize("ca-app-pub-3940256099942544~3347511713");
+    //Admob.initialize("ca-app-pub-3940256099942544~3347511713");
     
     Services.getPokemons().then((pokeFromJson) {
       setState(() {
@@ -105,7 +105,7 @@ class _DexHomeState extends State<DexHome> {
           child: Center(
             child: ListView.separated(
               separatorBuilder: (context, int index) {
-                if(index%6!=0) return SizedBox(height: 10,);
+                /*if(index%6!=0) return SizedBox(height: 10,);
                 else{
                   return Column(
                     children: <Widget>[
@@ -116,7 +116,7 @@ class _DexHomeState extends State<DexHome> {
                       SizedBox(height: 10,),
                     ],
                   );
-                }
+                }*/
               },
               itemBuilder: (BuildContext context, int index) {
                 return DexCard(
