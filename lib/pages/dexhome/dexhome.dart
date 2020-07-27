@@ -105,7 +105,8 @@ class _DexHomeState extends State<DexHome> {
           child: Center(
             child: ListView.separated(
               separatorBuilder: (context, int index) {
-                /*if(index%6!=0) return SizedBox(height: 10,);
+                return SizedBox(height: 10,);
+		/*if(index%6!=0) return SizedBox(height: 10,);
                 else{
                   return Column(
                     children: <Widget>[
